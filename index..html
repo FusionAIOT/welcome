@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FusionAIOT - AI-Driven Industrial IoT Solutions</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+primary: '#FF3B30',
+secondary: '#FF6B6B'
+},
+borderRadius: {
+'none': '0px',
+'sm': '4px',
+DEFAULT: '8px',
+'md': '12px',
+'lg': '16px',
+'xl': '20px',
+'2xl': '24px',
+'3xl': '32px',
+'full': '9999px',
+'button': '8px'
+}
+}
+}
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+.stats-card:hover { transform: translateY(-5px); transition: all 0.3s ease; }
+.service-card:hover { transform: translateY(-5px); transition: all 0.3s ease; }
+.tech-card:hover { transform: translateY(-5px); transition: all 0.3s ease; }
+.gradient-text {
+background: linear-gradient(120deg, #FF3B30, #FF6B6B);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+h2 { color: #FF3B30; }
+.text-primary { color: #FF3B30 !important; }
+.bg-primary { background-color: #FF3B30 !important; }
+.border-primary { border-color: #FF3B30 !important; }
+.hover\:text-primary:hover { color: #FF3B30 !important; }
+.hover\:bg-primary:hover { background-color: #FF3B30 !important; }
+.hover\:border-primary:hover { border-color: #FF3B30 !important; }
+@keyframes fadeIn {
+from { opacity: 0; transform: translateY(20px); }
+to { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeIn {
+animation: fadeIn 1s ease-out forwards;
+}
+</style>
+</head>
+<body class="bg-white">
+<nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between h-16">
+<div class="flex items-center">
+<a href="#" class="text-2xl">
+<img src="/assets/FusionAIOT Logo png.png" alt="FAIOT Logo" class="h-8">
+</a>
+</div>
+<div class="hidden md:flex items-center space-x-8">
+<a href="#home" class="text-gray-700 hover:text-primary">Home</a>
+<a href="#about" class="text-gray-700 hover:text-primary">About</a>
+<a href="#services" class="text-gray-700 hover:text-primary">Services</a>
+<a href="#projects" class="text-gray-700 hover:text-primary">Projects</a>
+<a href="#technology" class="text-gray-700 hover:text-primary">Technology</a>
+<button class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-primary/90 whitespace-nowrap cursor-pointer">Contact Us</button>
+</div>
+</div>
+</div>
+</nav>
+<main class="pt-16">
+<section id="home" class="relative min-h-[800px] flex items-center" style="background-image: url('https://public.readdy.ai/ai/img_res/98d018c659b0b2be0ac579f90f2464b6.jpg'); background-size: cover; background-position: center;">
+<div class="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-transparent"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+<div class="max-w-2xl">
+<h1 class="text-5xl font-bold mb-6 leading-tight">
+<span class="gradient-text">AI-Powered Industrial IoT</span><br>
+Solutions for Smart Manufacturing
+</h1>
+<p class="text-xl text-gray-600 mb-8">Transforming industrial operations with advanced AI and IoT integration for enhanced efficiency, safety, and predictive maintenance.</p>
+<div class="flex space-x-4">
+<button class="bg-primary text-white px-8 py-3 !rounded-button hover:bg-primary/90 text-lg font-medium whitespace-nowrap cursor-pointer">Get Started</button>
+<button class="bg-white border-2 border-primary text-primary px-8 py-3 !rounded-button hover:bg-gray-50 text-lg font-medium whitespace-nowrap cursor-pointer">Learn More</button>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 bg-gray-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold mb-4">Our Core Solutions</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">Empowering industries with cutting-edge technology solutions that drive efficiency and innovation.</p>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="bg-white p-8 rounded-lg shadow-sm service-card transition-all duration-300">
+<div class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
+<i class="ri-settings-3-line text-primary text-3xl"></i>
+</div>
+<h3 class="text-xl font-semibold mb-4">CAD/CAM Solutions</h3>
+<p class="text-gray-600">Advanced computer-aided design and manufacturing solutions for precision engineering and production optimization.</p>
+</div>
+<div class="bg-white p-8 rounded-lg shadow-sm service-card transition-all duration-300">
+<div class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
+<i class="ri-cloud-line text-primary text-3xl"></i>
+</div>
+<h3 class="text-xl font-semibold mb-4">AI-Driven IIoT</h3>
+<p class="text-gray-600">Smart industrial IoT solutions powered by artificial intelligence for real-time monitoring and control.</p>
+</div>
+<div class="bg-white p-8 rounded-lg shadow-sm service-card transition-all duration-300">
+<div class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
+<i class="ri-radar-line text-primary text-3xl"></i>
+</div>
+<h3 class="text-xl font-semibold mb-4">Predictive Maintenance</h3>
+<p class="text-gray-600">Advanced analytics and machine learning for predictive maintenance and equipment health monitoring.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid md:grid-cols-2 gap-12 items-center">
+<div>
+<h2 class="text-3xl font-bold mb-6">Revolutionizing Industrial Operations</h2>
+<p class="text-gray-600 mb-8">At FusionAIOT, we combine the power of AI, IoT, and machine learning to transform industrial processes. Our solutions enable smarter decision-making, enhanced safety, and improved operational efficiency.</p>
+<div class="grid grid-cols-2 gap-6">
+<div class="stats-card bg-white p-6 rounded-lg shadow-sm transition-all duration-300">
+<div class="text-3xl font-bold text-primary mb-2">98%</div>
+<div class="text-gray-600">Accuracy Rate</div>
+</div>
+<div class="stats-card bg-white p-6 rounded-lg shadow-sm transition-all duration-300">
+<div class="text-3xl font-bold text-primary mb-2">45%</div>
+<div class="text-gray-600">Cost Reduction</div>
+</div>
+<div class="stats-card bg-white p-6 rounded-lg shadow-sm transition-all duration-300">
+<div class="text-3xl font-bold text-primary mb-2">24/7</div>
+<div class="text-gray-600">Monitoring</div>
+</div>
+<div class="stats-card bg-white p-6 rounded-lg shadow-sm transition-all duration-300">
+<div class="text-3xl font-bold text-primary mb-2">500+</div>
+<div class="text-gray-600">Clients</div>
+</div>
+</div>
+</div>
+<div>
+<img src="https://public.readdy.ai/ai/img_res/a0f803fdd5cd0d43ea9d0bb04b683aa9.jpg" alt="Industrial Control Room" class="rounded-lg shadow-lg">
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 bg-gray-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold mb-4">Featured Project: Hindustan Shipyard</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">Implementing cutting-edge IIoT solutions for enhanced safety and efficiency in shipbuilding operations.</p>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="bg-white p-8 rounded-lg shadow-sm tech-card transition-all duration-300">
+<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
+<i class="ri-shield-check-line text-primary text-2xl"></i>
+</div>
+<h3 class="text-lg font-semibold mb-4">Real-time Safety Monitoring</h3>
+<p class="text-gray-600">Advanced sensors and AI algorithms for continuous safety monitoring in high-risk zones.</p>
+</div>
+<div class="bg-white p-8 rounded-lg shadow-sm tech-card transition-all duration-300">
+<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
+<i class="ri-database-2-line text-primary text-2xl"></i>
+</div>
+<h3 class="text-lg font-semibold mb-4">Predictive Analytics</h3>
+<p class="text-gray-600">Machine learning models for equipment maintenance prediction and optimization.</p>
+</div>
+<div class="bg-white p-8 rounded-lg shadow-sm tech-card transition-all duration-300">
+<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
+<i class="ri-dashboard-3-line text-primary text-2xl"></i>
+</div>
+<h3 class="text-lg font-semibold mb-4">Smart Dashboard</h3>
+<p class="text-gray-600">Centralized monitoring and control system for operational excellence.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold mb-4">Performance Metrics</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">Real-time monitoring and analytics of key performance indicators.</p>
+</div>
+<div class="grid md:grid-cols-2 gap-8">
+<div class="bg-white p-6 rounded-lg shadow-sm">
+<div id="efficiencyChart" class="h-80"></div>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-sm">
+<div id="maintenanceChart" class="h-80"></div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 bg-gray-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold mb-4">Get in Touch</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">Ready to transform your industrial operations? Contact us for a consultation.</p>
+</div>
+<div>
+<div class="bg-white p-8 rounded-lg shadow-sm mb-8">
+<h3 class="text-xl font-semibold mb-6">Contact Information</h3>
+<div class="space-y-4">
+<div class="flex items-center">
+<div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
+<i class="ri-map-pin-line text-primary"></i>
+</div>
+<div>
+<div class="font-medium">Address</div>
+<div class="text-gray-600">Vijayawada, India</div>
+</div>
+</div>
+<div class="flex items-center">
+<div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
+<i class="ri-phone-line text-primary"></i>
+</div>
+<div>
+<div class="font-medium">Phone</div>
+<div class="text-gray-600">+91 9885852232</div>
+</div>
+</div>
+<div class="flex items-center">
+<div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
+<i class="ri-mail-line text-primary"></i>
+</div>
+<div>
+<div class="font-medium">Email</div>
+<div class="text-gray-600">fusionaiot@gmail.com</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white p-8 rounded-lg shadow-sm">
+<h3 class="text-xl font-semibold mb-6">Business Hours</h3>
+<div class="space-y-2">
+<div class="flex justify-between">
+<span class="text-gray-600">Monday - Friday</span>
+<span class="font-medium">9:00 AM - 6:00 PM</span>
+</div>
+<div class="flex justify-between">
+<span class="text-gray-600">Saturday</span>
+<span class="font-medium">10:00 AM - 4:00 PM</span>
+</div>
+<div class="flex justify-between">
+<span class="text-gray-600">Sunday</span>
+<span class="font-medium">Closed</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-gray-900 text-white py-12">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid md:grid-cols-4 gap-8">
+<div>
+<a href="#" class="text-2xl font-['Pacifico'] text-white mb-4 block"><img src="/assets/FusionAIOT Logo png.png" alt="FusionAIOT" width="200px"></a>
+<p class="text-gray-400">Transforming industrial operations with advanced AI and IoT solutions.</p>
+</div>
+<div>
+<h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+<ul class="space-y-2">
+<li><a href="#" class="text-gray-400 hover:text-white">Home</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white">About</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white">Services</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white">Projects</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-semibold mb-4">Services</h4>
+<ul class="space-y-2">
+<li><a href="#" class="text-gray-400 hover:text-white">CAD/CAM Solutions</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white">AI-Driven IIoT</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white">Predictive Maintenance</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white">Safety Solutions</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-semibold mb-4">Connect</h4>
+<div class="flex space-x-4">
+<a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700">
+<i class="ri-linkedin-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700">
+<i class="ri-twitter-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700">
+<i class="ri-facebook-fill"></i>
+</a>
+</div>
+</div>
+</div>
+<div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+<p>&copy; 2025 FusionAIOT. All rights reserved.</p>
+</div>
+</div>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const targetId = this.getAttribute('href');
+    if(targetId === '#') return;
+    document.querySelector(targetId).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  });
+});
+// Fade in animation
+const sections = document.querySelectorAll('section');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('animate-fadeIn');
+    }
+  });
+}, { threshold: 0.1 });
+sections.forEach(section => {
+  section.style.opacity = '0';
+  observer.observe(section);
+});
+});
+const efficiencyChart = echarts.init(document.getElementById('efficiencyChart'));
+const maintenanceChart = echarts.init(document.getElementById('maintenanceChart'));
+const efficiencyOption = {
+animation: false,
+title: {
+text: 'Operational Efficiency',
+textStyle: {
+color: '#1f2937'
+}
+},
+tooltip: {
+trigger: 'axis',
+backgroundColor: 'rgba(255, 255, 255, 0.9)',
+textStyle: {
+color: '#1f2937'
+}
+},
+xAxis: {
+type: 'category',
+data: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+axisLabel: {
+color: '#1f2937'
+}
+},
+yAxis: {
+type: 'value',
+axisLabel: {
+color: '#1f2937'
+}
+},
+series: [{
+data: [85, 88, 92, 90, 95, 98],
+type: 'line',
+smooth: true,
+lineStyle: {
+color: 'rgba(87, 181, 231, 1)'
+},
+areaStyle: {
+color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+offset: 0,
+color: 'rgba(87, 181, 231, 0.3)'
+}, {
+offset: 1,
+color: 'rgba(87, 181, 231, 0.1)'
+}])
+}
+}]
+};
+const maintenanceOption = {
+animation: false,
+title: {
+text: 'Maintenance Predictions',
+textStyle: {
+color: '#1f2937'
+}
+},
+tooltip: {
+trigger: 'item',
+backgroundColor: 'rgba(255, 255, 255, 0.9)',
+textStyle: {
+color: '#1f2937'
+}
+},
+series: [{
+type: 'pie',
+radius: ['40%', '70%'],
+itemStyle: {
+borderRadius: 8
+},
+data: [
+{ value: 60, name: 'Optimal', itemStyle: { color: 'rgba(87, 181, 231, 1)' } },
+{ value: 25, name: 'Warning', itemStyle: { color: 'rgba(251, 191, 114, 1)' } },
+{ value: 15, name: 'Critical', itemStyle: { color: 'rgba(252, 141, 98, 1)' } }
+],
+label: {
+color: '#1f2937'
+}
+}]
+};
+efficiencyChart.setOption(efficiencyOption);
+maintenanceChart.setOption(maintenanceOption);
+window.addEventListener('resize', () => {
+efficiencyChart.resize();
+maintenanceChart.resize();
+});
+</script>
+</body>
+</html>
